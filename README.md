@@ -1,8 +1,3 @@
-CSS: ../style.css
-title: A Half-hour to Learn R
-date: 2021-06-21
-
-
 # R: a quick introduction #
 
 This article introduces most of R-specific concepts like vectorisation, recycling, subsetting, matrix and data.frame objects, as well as various built in types.
