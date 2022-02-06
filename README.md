@@ -96,7 +96,7 @@ Special type values are returned in special circumstances:
 -1+0i / 0       # NaN+NaNi
 ```
 
-If a value is missing operator will determine whether result can be known:
+If a value is missing operator will determine whether the result can be known:
 
 ```r
 1^NA            # 1
