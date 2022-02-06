@@ -1,7 +1,8 @@
 # R: a quick introduction #
 
-This article introduces most of R-specific concepts like vectorisation, recycling, subsetting, matrix and data.frame objects, as well as various built in types.
+This article focuses on R-specific concepts like vectorisation, recycling, subsetting, matrix and data.frame objects, as well as various built in types.
 Control statements and function/object declarations are omitted.
+The text is laconic, there is no hand-holding, so it is best to consume it slowly.
 
 
 ## Types ##
