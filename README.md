@@ -324,8 +324,8 @@ In this case recycling takes place - the shorter vector is extended to match the
 x <- c(1, 1, 1, 1)
 y <- c(0, 1)
 
-        # original       after recylcing
-x + y   # x = 1 1 1 1    x = 1 1 1 1
+        # original       after recylcing    result
+x + y   # x = 1 1 1 1    x = 1 1 1 1        1 2 1 2
         # y = 0 1        y = 0 1 0 1
 ```
 
@@ -349,7 +349,7 @@ x * y
 When the longer vector is not a multiple of the shorter one - recycle takes place but a warning is displayed:
 
 ```r
-c(1, 2, 3) - c(0, 1)
+c(1, 2, 3) - c(0, 1)   # result: 1 1 3
 
 # Warning message:
 # In c(1, 2, 3) - c(0, 1) :
@@ -507,7 +507,7 @@ x[4] <- "e"         # x is now character
 ## List type ##
 
 In a vector all elements have the same type.
-List can store multiple elements of different types.
+Lists can store multiple elements of different types.
 
 ```r
 list(1L, 0, "a", TRUE)  # values are not converted to character type
@@ -565,7 +565,7 @@ l[[c(1,2)]]              # error - cannot return two objects, without a list to 
 l[[-c(1,2)]]             # error - negative indices cannot be used for list elements
 l[[c(TRUE,FALSE,TRUE)]]  # error - logical indices cannot be used
 l[[c("a")]]
-l[[c("a","b")]]
+l[[c("a","b")]]          # error - cannot return two objects, without a list to hold them
 ```
 
 Elements in nested lists can be selected by stacking double brackets:
