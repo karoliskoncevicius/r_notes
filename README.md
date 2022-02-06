@@ -702,7 +702,7 @@ This allows specifying some common operations easily:
 X <- matrix(1:20, nrow=4)
 Y <- matrix(runif(20), nrow=4)
 
-X + 1            # add an element to each number of a matrix
+X + 1            # add a number to each element of a matrix
 X > 2            # compare each element of a matrix with a number
 X / Y            # divide elements of one matrix from another
 X < Y            # compare two matrices element-wise
@@ -772,7 +772,7 @@ Removing rows and columns by an index:
 X <- matrix(1:20, ncol=4)
 
 X[-1,]          # drop first row
-X[,-c(2,3)]     # drop second column
+X[,-c(2,3)]     # drop second and third columns
 X[-1, -c(2,3)]  # combination of the above
 X[-1, c(2,3)]   # removal of rows combined with selection of columns
 X[,-c(1:3)]     # when single row/column is left - a vector is returned
