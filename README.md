@@ -61,67 +61,67 @@ For manipulating and combining objects R has a number of standard operators:
 Types and operators can be combined in a standard infix form:
 
 ```r
-TRUE |  FALSE
-   2 +  2
-   3 *  10
-3+0i +  0+1i
-   3 == 10
-   4 <  Inf
- "a" != "b"
+TRUE |  FALSE   # TRUE
+   2 +  2       # 4
+   3 *  10      # 30
+3+0i +  0+1i    # 3+1i
+   3 == 10      # FALSE
+   4 <  Inf     # TRUE
+ "a" != "b"     # TRUE
 ```
 
 Some operators are used with a single object:
 
 ```r
-!TRUE
--10L
+!TRUE           # FALSE
+-10L            # -10
 ```
 
 Some operators can combine different types, casting the result to the most general type:
 
 ```r
-TRUE + 1L
-  2L * 2.2
-   2 & TRUE
-   0 & TRUE
+TRUE + 1L       # 2
+  2L * 2.2      # 4.4
+   2 & TRUE     # TRUE
+   0 & TRUE     # FALSE (0 is treated as FALSE, any other number as TRUE)
 ```
 
 Special type values are returned in special circumstances:
 
 ```r
-   10 / 0     # Inf
-   -2 / 0     # -Inf
-    0 / 0     # NaN
--1+0i / 0     # NaN+NaNi
+   10 / 0       # Inf
+   -2 / 0       # -Inf
+    0 / 0       # NaN
+-1+0i / 0       # NaN+NaNi
 ```
 
 If a value is missing operator will determine whether result can be known:
 
 ```r
-1^NA          # 1
-2^NA          # NA
-NA^0          # 1
+1^NA            # 1
+2^NA            # NA
+NA^0            # 1
 
-TRUE  | NA    # TRUE
-TRUE  & NA    # NA
-FALSE | NA    # NA
-FALSE & NA    # FALSE
+TRUE  | NA      # TRUE
+TRUE  & NA      # NA
+FALSE | NA      # NA
+FALSE & NA      # FALSE
 ```
 
 When multiple operators are used within one expression their order is determined by precedence.
 
 ```r
-2 + 2 / 2     # result = 3, because division has higher precedence
+2 + 2 / 2       # result = 3, because division has higher precedence
 ```
 
 Since the available symbols on the keyboard are not enough to cover all necessary operators, other, lesser used operators are defined by surrounding them with a percent symbol `%`:
 
 ```r
-%/%           # integer division
-%%            # residual after integer division (modulo)
+%/%             # integer division
+%%              # residual after integer division (modulo)
 
-27 %/% 24     # result = 1
-27 %%  24     # result = 3
+27 %/% 24       # result = 1
+27 %%  24       # result = 3
 ```
 
 
