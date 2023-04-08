@@ -1,11 +1,13 @@
 # R bugs and inconsistencies #
 
-A list of detected bugs and inconsistencies in R.
 The list only includes bugs that were detected during work.
 Still active issues are on the top, solved issues are at the bottom.
 
 
 ## Active ##
+
+
+---
 
 
 Row selection from a matrix using rownames with `NA`s results in an error.
@@ -152,6 +154,9 @@ var.test(rnorm(10), rnorm(10), conf.level=0)
 ## Solved ##
 
 
+---
+
+
 `wilcoxon.test(paired = TRUE)` has tolerance issues when detecting ties.
 
 ```
@@ -208,3 +213,5 @@ fligner.test(c(1,1,1,2,2,2), c("a","a","a","b","b","b"))
 
 - [Discussion on R-devel](https://stat.ethz.ch/pipermail/r-devel/2019-June/078038.html)
 
+
+---
