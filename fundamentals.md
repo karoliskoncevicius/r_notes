@@ -1,4 +1,4 @@
-# R: a quick introduction #
+# R fundamentals #
 
 This article focuses on R-specific concepts like vectorisation, recycling, subsetting, matrix and data.frame objects, and some built in types.
 The text is laconic, there is no hand-holding, so it is best to consume it slowly.
