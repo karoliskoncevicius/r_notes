@@ -71,7 +71,7 @@ iris$Sp<tab>                             iris[iris$Sp<tab>]
 
 ### Inconsistent output format for distribution functions ###
 
-Distribution functions like `pnorm()` have an inconsistent output format for an emtpy `<0,0> dimension matrix.
+Distribution functions like `pnorm()` have an inconsistent output format for an emtpy `<0,0>` dimension matrix.
 
 ```
 x <- matrix(numeric(), nrow=0, ncol=0)
@@ -103,6 +103,8 @@ qwilcox(x, 1, 1)                         # numeric(0)
 
 When the matrix is non empty all the functions (except `qbirthday()`) preserve the original matrix format.
 Therefore, in my opinion, returning `<0 x 0 matrix>` is the correct behaviour.
+
+- [Report on Bugzilla](https://bugs.r-project.org/show_bug.cgi?id=18509)
 
 
 ---
