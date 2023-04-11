@@ -108,6 +108,15 @@ FALSE | NA      # NA
 FALSE & NA      # FALSE
 ```
 
+Scalar versions of logical AND and OR operators are useful for preventing unnecessary right-hand-side computations.
+
+```r
+FALSE &  stop("stop")    # <error>
+FALSE && stop("stop")    # FALSE
+TRUE  |  stop("stop")    # <error>
+TRUE  || stop("stop")    # FALSE
+```
+
 When multiple operators are used within one expression their order is determined by precedence.
 
 ```r
@@ -267,10 +276,22 @@ Most operators, when applied on vectors, apply the operation to each element sep
 x <- c(1, 2, 3)
 y <- c(0, 10, 1)
 
-x + 1     # 2 3 4
-x + y     # 1 12 4
-x > 2     # FALSE FALSE TRUE
-x > y     # FALSE TRUE FALSE
+x + 1                # 2 3 4
+x + y                # 1 12 4
+x > 2                # FALSE FALSE  TRUE
+x > y                #  TRUE FALSE  TRUE
+```
+
+Scalar AND and OR operators are an exception and only work on vectors of length 1.
+
+```r
+x <- c(TRUE, FALSE)
+y <- c(FALSE, TRUE)
+
+x  & y               # FALSE FALSE
+x && y               # <error>
+x  | y               # TRUE TRUE
+x || y               # <error>
 ```
 
 Lots of functions work with vectors too, and provide a reasonable result:
