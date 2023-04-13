@@ -91,7 +91,6 @@ qlogis(x)                                # numeric(0)
 qnbinom(x, 1, 1)                         # numeric(0)
 qnorm(x)                                 # numeric(0)
 qpois(x, 1)                              # <0 x 0 matrix>
-qpois(x, 1)                              # <0 x 0 matrix>
 qsignrank(x, 1)                          # <0 x 0 matrix>
 qsmirnov(x, c(1,1))                      # numeric(0)
 qt(x, 1)                                 # <0 x 0 matrix>
@@ -213,9 +212,6 @@ wilcox.test(x, y, conf.int=0.95, conf.level=1)   # <error>
 
 
 ## Solved ##
-
-
----
 
 
 ### Tolerance issues for ties in Wilcoxon's test ###
