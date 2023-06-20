@@ -5,7 +5,7 @@ Useful commands for working with matrices.
 
 ### Creating a matrix ###
 
-Multiple ways to quickly create helper matrix objects.
+Multiple ways to quickly create helper matrices.
 
 ```
 matrix(0, 3, 3)                         mat.or.vec(3,3)
@@ -73,14 +73,14 @@ X - rowMeans(X)[row(X)]                 X - colMeans(X)[col(X)]
 ```
 
 Since matrices are just vectors ordered column-by-column row-wise subtraction can be simplified.
-For example, the example below will subtract all means from the first column, then repeat this for all the means in the second column, etc.
+The example below will subtract all means from the first column, then repeat this for all the means in the second column, etc.
 As a result every row will have its corresponding mean subtracted.
 
 ```
 X - rowMeans(X)
 ```
 
-These methods are general and works with any operations, not just subtraction.
+These methods are general and work with any operations, not just subtraction.
 
 ```
 (X - rowMeans(X)) / matrixStats::rowSds(X)                   # scale each row
@@ -96,8 +96,8 @@ These methods are general and works with any operations, not just subtraction.
 Order each row/column of a matrix separately.
 
 ```
-matrix(X[order(row(X), X)], nrow=nrow(X), byrow=TRUE)  # by row
-matrix(X[order(col(X), X)], nrow=nrow(X))              # by column
+matrix(X[order(row(X), X)], nrow=nrow(X), byrow=TRUE)        # by row
+matrix(X[order(col(X), X)], nrow=nrow(X))                    # by column
 ```
 
 Missing values are placed last.

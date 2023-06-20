@@ -6,6 +6,36 @@ Still active issues are on the top, solved issues are at the bottom.
 
 ## Active ##
 
+### Matrix column names can themselves have names ####
+
+When setting column names for a matrix the column names can themselves have names.
+
+```
+mat <- data.matrix(iris)
+colnames(mat) <- c(A = "a", B = "b", C = "c", D = "d", E = "e")
+
+colnames(mat)
+#   A   B   C   D   E
+# "a" "b" "c" "d" "e"
+```
+
+The names are gone after any subset operation the matrix.
+
+```
+colnames(mat[1:10,])
+# [1] "a" "b" "c" "d" "e"
+```
+
+Moreover, this is not the case for data.frames.
+
+```
+df <- iris
+colnames(df) <- c(A = "a", B = "b", C = "c", D = "d", E = "e")
+
+colnames(df)
+# [1] "a" "b" "c" "d" "e"
+```
+
 
 ### Selection of NA rownames from a matrix ###
 
