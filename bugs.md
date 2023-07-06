@@ -36,6 +36,8 @@ colnames(df)
 # [1] "a" "b" "c" "d" "e"
 ```
 
+- [Report on Bugzilla](https://bugs.r-project.org/show_bug.cgi?id=18558)
+
 
 ### Selection of NA rownames from a matrix ###
 
